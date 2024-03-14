@@ -1,0 +1,9 @@
+<?php 
+
+$dbPath = __DIR__. '/banco.sqlite';
+$pdo = new PDO("sqlite:$dbPath");
+
+$pdo->
+  exec(
+    'CREATE TABLE users (id INTEGER PRIMARY KEY, email TEXT, passowrd TEXT
+    );');
