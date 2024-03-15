@@ -17,6 +17,7 @@ class JsonVideosListController implements Controller {
 
     $videoList = array_map( function(Video $video):array {
       return [
+        'ID' => $video->id,
         'url' => $video->url,
         'title' => $video->title,
         'file_path' => 'img/uploads/' . $video->getFilePath()
